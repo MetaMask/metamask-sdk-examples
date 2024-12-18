@@ -15,7 +15,8 @@ export default function Home() {
           <div className="flex flex-col gap-10">
             {/* Docs Card */}
             <a
-              href="#"
+              href="https://docs.metamask.io/sdk/"
+              target="_blank"
               className="relative bg-indigo-500 rounded-tr-sm rounded-bl-sm rounded-tl-xl rounded-br-xl bg-opacity-40 max-w-md text-white border-none transition-colors h-full"
             >
               <div className="bg-indigo-500 bg-opacity-20 h-[107%] w-[104%] rounded-xl -z-20 absolute right-0 bottom-0"></div>
@@ -35,7 +36,8 @@ export default function Home() {
 
             {/* Get ETH Card */}
             <a
-              href="#"
+              href="https://docs.metamask.io/developer-tools/faucet/"
+              target="_blank"
               className="bg-teal-300 bg-opacity-60 rounded-tr-sm rounded-bl-sm rounded-tl-xl rounded-br-xl relative max-w-md h-full text-white border-none transition-colors"
             >
               <div className="bg-teal-300 bg-opacity-20 h-[107%] w-[104%] rounded-xl -z-20 absolute right-0 bottom-0"></div>
@@ -54,7 +56,7 @@ export default function Home() {
             </a>
           </div>
 
-          <Card className="relative bg-pink-500 bg-opacity-35 rounded-tr-sm rounded-bl-sm text-white border-none h-full w-full max-w-xl">
+          <Card className="relative bg-pink-500 bg-opacity-35 rounded-tr-sm rounded-bl-sm text-white border-none h-full w-full max-w-xl self-start h-[360px]">
             <div className="bg-pink-500 bg-opacity-20 h-[104%] w-[103%] md:h-[103%] md:w-[102%] rounded-xl -z-20 absolute right-0 bottom-0"></div>
             <div className="bg-pink-500 bg-opacity-20 h-[104%] w-[103%] md:h-[103%] md:w-[102%] rounded-xl -z-20 absolute top-0 left-0"></div>
             <CardHeader>
@@ -67,16 +69,17 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">Guides</h3>
                 <div className="space-y-2">
                   {[
-                    "Manage Networks",
-                    "Handle Transactions",
-                    "Interact with Smart Contracts",
+                    {url: "https://docs.metamask.io/sdk/guides/network-management/", text: "Manage Networks"},
+                    {url: "https://docs.metamask.io/sdk/guides/transaction-handling/", text: "Handle Transactions"},
+                    {url: "https://docs.metamask.io/sdk/guides/interact-with-contracts/", text: "Interact with Smart Contracts"},
                   ].map((item) => (
                     <a
-                      href="#"
-                      key={item}
+                      href={item.url}
+                      key={item.text}
+                      target="_blank"
                       className="flex items-center gap-2 w-fit text-white text-opacity-80 cursor-pointer transition-colors"
                     >
-                      <span className="hover:mr-1 duration-300">{item}</span>
+                      <span className="hover:mr-1 duration-300">{item.text}</span>
                       <ArrowRight className="h-5 w-5" />
                     </a>
                   ))}
@@ -85,18 +88,19 @@ export default function Home() {
               <div className="space-y-1">
                 <h3 className="text-lg font-semibold">Examples</h3>
                 <div className="space-y-1">
-                  {["Web 3 AI Agent", "Mint NFT App", "Swap DeFi App"].map(
-                    (item) => (
-                      <a
-                        href="#"
-                        key={item}
-                        className="flex items-center gap-2 w-fit text-white text-opacity-80 cursor-pointer transition-colors"
-                      >
-                        <span className="hover:mr-1 duration-300">{item}</span>
-                        <ArrowRight className="h-5 w-5" />
-                      </a>
-                    )
-                  )}
+                  {[
+                    {url: "https://github.com/MetaMask/metamask-sdk-examples/tree/main/examples/quickstart", text: "Next.js + Wagmi"},
+                  ].map((item) => (
+                    <a
+                      href={item.url}
+                      key={item.text}
+                      target="_blank"
+                      className="flex items-center gap-2 w-fit text-white text-opacity-80 cursor-pointer transition-colors"
+                    >
+                      <span className="hover:mr-1 duration-300">{item.text}</span>
+                      <ArrowRight className="h-5 w-5" />
+                    </a>
+                  ))}
                 </div>
               </div>
             </CardContent>
