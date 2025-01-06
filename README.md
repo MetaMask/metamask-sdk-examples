@@ -85,4 +85,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - [MetaMask SDK Documentation](https://docs.metamask.io/sdk/)
 - [Turborepo Documentation](https://turbo.build/repo/docs)
-- [Report Issues](https://github.com/yourusername/metamask-sdk-examples/issues)
+- [Report Issues](https://github.com/MetaMask/metamask-sdk-examples/issues)
