@@ -29,7 +29,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-indigo-100">
-                  Find in-depth information about the SDK features
+                  Find in-depth information about the SDK features.
                 </p>
               </CardContent>
             </a>
@@ -69,9 +69,9 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">Guides</h3>
                 <div className="space-y-2">
                   {[
-                    {url: "https://docs.metamask.io/sdk/guides/network-management/", text: "Manage Networks"},
-                    {url: "https://docs.metamask.io/sdk/guides/transaction-handling/", text: "Handle Transactions"},
-                    {url: "https://docs.metamask.io/sdk/guides/interact-with-contracts/", text: "Interact with Smart Contracts"},
+                    {url: "https://docs.metamask.io/sdk/guides/manage-networks/", text: "Manage networks"},
+                    {url: "https://docs.metamask.io/sdk/guides/handle-transactions/", text: "Handle transactions"},
+                    {url: "https://docs.metamask.io/sdk/guides/interact-with-contracts/", text: "Interact with smart contracts"},
                   ].map((item) => (
                     <a
                       href={item.url}
