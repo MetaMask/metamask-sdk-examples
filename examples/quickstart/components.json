@@ -17,5 +17,8 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
+  "scripts": {
+    "deleteAllAliases": "rm -rf ./components ./utils ./ui ./lib ./hooks"
+  },
   "iconLibrary": "lucide"
 }

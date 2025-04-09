@@ -134,3 +134,43 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 Feel free to customize and expand upon this README to suit your project's needs.
+
+## New Functionality: `--all` Flag
+
+The `--all` flag has been added to delete all aliases in the project. This functionality is useful for cleaning up the project by removing all alias definitions at once.
+
+### Usage
+
+To delete all aliases, run the following command:
+
+```bash
+pnpm run delete-all-aliases
+```
+
+This command will remove all alias definitions specified in the `components.json` file.
+
+## Solidity Code Snippet for Key
+
+Here is a Solidity code snippet for managing keys in a smart contract:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract KeyManager {
+    mapping(address => bytes32) private keys;
+
+    event KeySet(address indexed user, bytes32 key);
+
+    function setKey(bytes32 _key) public {
+        keys[msg.sender] = _key;
+        emit KeySet(msg.sender, _key);
+    }
+
+    function getKey(address _user) public view returns (bytes32) {
+        return keys[_user];
+    }
+}
+```
+
+This contract allows users to set and retrieve keys associated with their addresses. The `setKey` function stores the key for the sender's address, and the `getKey` function retrieves the key for a given address.

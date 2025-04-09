@@ -61,7 +61,7 @@ export default function Home() {
             <div className="bg-pink-500 bg-opacity-20 h-[104%] w-[103%] md:h-[103%] md:w-[102%] rounded-xl -z-20 absolute top-0 left-0"></div>
             <CardHeader>
               <CardTitle className="text-2xl">
-                Add your own functionality
+                Changeschung
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-7">

@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "delete-all-aliases": "node -e \"require('./components.json').scripts.deleteAllAliases\""
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.3",
