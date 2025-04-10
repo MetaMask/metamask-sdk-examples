@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/MIT)
+
 # MetaMask SDK Examples Monorepo
 
 This monorepo contains various example applications demonstrating the integration of MetaMask SDK across different frameworks and platforms. Built with Turborepo for efficient development and build processes.
