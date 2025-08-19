@@ -1,4 +1,4 @@
-# Quickstart App
+# MetaMask Wagmi Quickstart Example
 
 This quickstart application demonstrates how to integrate the **MetaMask SDK** with a **Next.js** application using **wagmi**. It showcases connecting to a wallet, switching networks, and interacting with Ethereum-based functionalities.
 

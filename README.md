@@ -1,13 +1,13 @@
 # MetaMask SDK Examples Monorepo
 
-This monorepo contains various example applications demonstrating the integration of MetaMask SDK across different frameworks and platforms. Built with Turborepo for efficient development and build processes.
+This monorepo contains various example applications demonstrating the integration of MetaMask SDK across different frameworks, platforms and partners.
 
 ## 🚀 Getting Started
 
 Clone and install dependencies:
 
 ```sh
-git clone <repository-url>
+git clone https://github.com/MetaMask/metamask-sdk-examples.git
 cd metamask-sdk-examples && pnpm install
 ```
 
@@ -15,24 +15,34 @@ cd metamask-sdk-examples && pnpm install
 
 ```
 metamask-sdk-examples/
-├── examples/           # Example applications
-│   ├── react/         # React.js integration
+├── quickstarts/      # Example applications
+│   ├── javascript/    # JavaScript integration
+│   ├── react/         # React + Vite integration
 │   ├── next/          # Next.js integration
-│   ├── vue/           # Vue.js integration
-│   └── vanilla/       # Vanilla JavaScript integration
-├── packages/          # Shared configurations and utilities
-│   ├── eslint-config/ # Shared ESLint configurations
-│   └── tsconfig/     # Shared TypeScript configurations
+│   ├── react-native/  # React Native integration
+│   ├──────────────────────────
+│   ├── wagmi/         # Wagmi integration
+│   ├── rainbowkit/    # RainbowKit integration
+├── partners/          # Example applications with partners
+│   ├── dynamic/       # Dynamic integration
+│   ├── web3auth/      # Web3Auth integration
 ```
 
 ## 🎯 Available Examples
 
-Each example in the `examples/` directory demonstrates MetaMask SDK integration in different frameworks and scenarios:
+Each example in the `quickstarts/` directory demonstrates MetaMask SDK integration in different frameworks and scenarios:
 
 - **React Example**: Modern React application showcasing hooks and components
 - **Next.js Example**: Server-side rendering and static site generation
-- **Vue Example**: Vue.js integration example
-- **Vanilla JS**: Pure JavaScript implementation without frameworks
+- **JavaScript Example**: Pure JavaScript implementation without frameworks
+- **React Native Example**: React Native integration example
+- **Wagmi Example**: Wagmi integration example
+- **RainbowKit Example**: RainbowKit integration example
+
+And each example in the `partners/` directory demonstrates MetaMask SDK integration with different partners:
+
+- **Dynamic Example**: Dynamic integration example
+- **Web3Auth Example**: Web3Auth integration example
 
 ## 🛠 Development
 
@@ -41,16 +51,9 @@ Each example in the `examples/` directory demonstrates MetaMask SDK integration 
 To run a specific example:
 
 ```sh
-cd examples/<example-name>
-pnpm dev
+cd <quickstarts or partners>/<example-name>
+pnpm install && pnpm dev
 ```
-
-### Adding New Examples
-
-1. Create a new directory in `examples/`
-2. Copy the example template (if available)
-3. Implement the MetaMask SDK integration
-4. Update this README with the new example details
 
 ## 🔧 Technical Stack
 
@@ -63,6 +66,7 @@ pnpm dev
 ## 📚 Documentation
 
 Each example includes its own README with:
+
 - Specific setup instructions
 - Implementation details
 - Best practices
@@ -70,7 +74,9 @@ Each example includes its own README with:
 
 ## 🤝 Contributing
 
-We welcome contributions! To add a new example:
+We welcome contributions!
+
+To add a new example:
 
 1. Fork the repository
 2. Create a new branch
@@ -84,5 +90,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🔗 Useful Links
 
 - [MetaMask SDK Documentation](https://docs.metamask.io/sdk/)
-- [Turborepo Documentation](https://turbo.build/repo/docs)
 - [Report Issues](https://github.com/MetaMask/metamask-sdk-examples/issues)
