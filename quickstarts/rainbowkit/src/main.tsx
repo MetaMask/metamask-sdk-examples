@@ -13,7 +13,7 @@ const queryClient = new QueryClient();
 
 const config = getDefaultConfig({
   appName: "MetaMask SDK RainbowKit Quickstart",
-  projectId: import.meta.env.VITE_RAINBOWKIT_PROJECT_ID || "",
+  projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID,
   chains: [mainnet, linea, sepolia, lineaSepolia],
   ssr: false, // true if your dApp uses SSR
 });

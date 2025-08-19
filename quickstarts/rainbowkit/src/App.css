@@ -5,6 +5,13 @@
   text-align: center;
 }
 
+.connect-button-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +46,8 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.underline:hover {
+  text-decoration: underline;
 }
