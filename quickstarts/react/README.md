@@ -15,6 +15,18 @@ cd quickstarts/react
 pnpm install
 ```
 
+## Create a `.env` file
+
+```bash
+cp .env.example .env.local
+```
+
+## Add your Infura API key
+
+```bash
+VITE_INFURA_API_KEY=your-infura-api-key
+```
+
 ## Run
 
 ```bash
