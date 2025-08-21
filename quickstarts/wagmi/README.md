@@ -93,33 +93,38 @@ To run the application locally, follow these steps:
 
 1. **Clone the repository**
 
-   ```bash:examples/quickstart/README.md
-   git clone https://github.com/your-repo/quickstart-app.git
+   ```bash
+   git clone https://github.com/MetaMask/metamask-sdk-examples.git
+   cd metamask-sdk-examples/quickstarts/wagmi
    ```
 
-2. **Navigate to the project directory**
+   or using [degit](https://www.npmjs.com/package/degit)
 
    ```bash
-   cd quickstart-app
+   npx degit MetaMask/metamask-sdk-examples/quickstarts/wagmi mm-sdk-wagmi-quickstart && cd mm-sdk-wagmi-quickstart
    ```
 
-3. **Install dependencies**
+2. **Install dependencies**
 
    ```bash
-   pnpm i
+   npm install
+   # or
+   pnpm install
    # or
    yarn install
    ```
 
-4. **Run the development server**
+3. **Run the development server**
 
    ```bash
+   npm run dev
+   # or
    pnpm dev
    # or
    yarn dev
    ```
 
-5. **Open your browser**
+4. **Open your browser**
 
    Visit [http://localhost:3000](http://localhost:3000) to see the application running.
 

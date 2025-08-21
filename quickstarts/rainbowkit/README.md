@@ -6,13 +6,23 @@ This is the quickstart of the [MetaMask SDK](https://docs.metamask.io/sdk) with 
 
 ```bash
 git clone https://github.com/MetaMask/metamask-sdk-examples.git
+cd metamask-sdk-examples/quickstarts/rainbowkit
+```
+
+or using [degit](https://www.npmjs.com/package/degit)
+
+```bash
+npx degit MetaMask/metamask-sdk-examples/quickstarts/rainbowkit mm-sdk-rainbowkit-quickstart && cd mm-sdk-rainbowkit-quickstart
 ```
 
 ## Install dependencies
 
 ```bash
-cd quickstarts/rainbowkit
+npm install
+# or
 pnpm install
+# or
+yarn install
 ```
 
 ## Create a `.env` file
@@ -32,5 +42,9 @@ Every dApp must now provide a [WalletConnect Cloud projectId](https://rainbowkit
 ## Run
 
 ```bash
+npm run dev
+# or
 pnpm dev
+# or
+yarn dev
 ```

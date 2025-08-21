@@ -4,7 +4,7 @@ This monorepo contains various example applications demonstrating the integratio
 
 ## 🚀 Getting Started
 
-Clone and install dependencies:
+Clone and install dependencies for all examples:
 
 ```sh
 git clone https://github.com/MetaMask/metamask-sdk-examples.git
@@ -54,6 +54,39 @@ To run a specific example:
 cd <quickstarts or partners>/<example-name>
 pnpm install && pnpm dev
 ```
+
+## Cloning individual examples using [degit](https://www.npmjs.com/package/degit)
+
+- [**React Example**](quickstarts/react):
+  ```bash
+  npx degit MetaMask/metamask-sdk-examples/quickstarts/react mm-sdk-react-quickstart && cd mm-sdk-react-quickstart && npm install && npm run dev
+  ```
+- [**Next.js Example**](quickstarts/next):
+  ```bash
+  npx degit MetaMask/metamask-sdk-examples/quickstarts/next mm-sdk-nextjs-quickstart && cd mm-sdk-nextjs-quickstart && npm install && npm run dev
+  ```
+- [**JavaScript Example**](quickstarts/javascript):
+  ```bash
+  npx degit MetaMask/metamask-sdk-examples/quickstarts/javascript mm-sdk-javascript-quickstart && cd mm-sdk-javascript-quickstart && npm install && npm run dev
+  ```
+- [**Wagmi Example**](quickstarts/wagmi):
+  ```bash
+  npx degit MetaMask/metamask-sdk-examples/quickstarts/wagmi mm-sdk-wagmi-quickstart && cd mm-sdk-wagmi-quickstart && npm install && npm run dev
+  ```
+- [**RainbowKit Example**](quickstarts/rainbowkit):
+
+  ```bash
+  npx degit MetaMask/metamask-sdk-examples/quickstarts/rainbowkit mm-sdk-rainbowkit-quickstart && cd mm-sdk-rainbowkit-quickstart && npm install && npm run dev
+  ```
+
+- [**Dynamic Example**](partners/dynamic):
+  ```bash
+  npx degit MetaMask/metamask-sdk-examples/partners/dynamic mm-sdk-dynamic-quickstart && cd mm-sdk-dynamic-quickstart && npm install && npm run dev
+  ```
+- [**Web3Auth Example**](partners/web3auth):
+  ```bash
+  npx degit MetaMask/metamask-sdk-examples/partners/web3auth mm-sdk-web3auth-quickstart && cd mm-sdk-web3auth-quickstart && npm install && npm run dev
+  ```
 
 ## 🔧 Technical Stack
 
