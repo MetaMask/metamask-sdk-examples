@@ -32,17 +32,17 @@ metamask-sdk-examples/
 
 Each example in the `quickstarts/` directory demonstrates MetaMask SDK integration in different frameworks and scenarios:
 
-- **React Example**: Modern React application showcasing hooks and components
-- **Next.js Example**: Server-side rendering and static site generation
-- **JavaScript Example**: Pure JavaScript implementation without frameworks
-- **React Native Example**: React Native integration example
-- **Wagmi Example**: Wagmi integration example
-- **RainbowKit Example**: RainbowKit integration example
+- [**React Example**](quickstarts/react): Modern React application showcasing hooks and components
+- [**Next.js Example**](quickstarts/next): Server-side rendering and static site generation
+- [**JavaScript Example**](quickstarts/javascript): Pure JavaScript implementation without frameworks
+- [**React Native Example**](#): React Native integration example
+- [**Wagmi Example**](quickstarts/wagmi): Wagmi integration example
+- [**RainbowKit Example**](quickstarts/rainbowkit): RainbowKit integration example
 
 And each example in the `partners/` directory demonstrates MetaMask SDK integration with different partners:
 
-- **Dynamic Example**: Dynamic integration example
-- **Web3Auth Example**: Web3Auth integration example
+- [**Dynamic Example**](partners/dynamic): Dynamic integration example
+- [**Web3Auth Example**](partners/web3auth): Web3Auth integration example
 
 ## 🛠 Development
 
