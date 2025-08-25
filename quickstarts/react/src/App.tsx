@@ -1,14 +1,16 @@
+import { useEffect, useState } from "react";
+
+// IMP START - MetaMask SDK Import
+import { MetaMaskSDK, type SDKProvider } from "@metamask/sdk";
+// IMP END - MetaMask SDK Import
+
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import metaMaskLogo from "./assets/mm-fox.svg";
 import "./App.css";
 
-import { MetaMaskSDK, type SDKProvider } from "@metamask/sdk";
-import { useEffect, useState } from "react";
-
+// IMP START - Initialize the MetaMask SDK
 const MMSDK = new MetaMaskSDK({
-  checkInstallationImmediately: false,
-  checkInstallationOnAllCalls: false,
   dappMetadata: {
     name: "MetaMask SDK Demo",
     url: window.location.href,
@@ -16,6 +18,7 @@ const MMSDK = new MetaMaskSDK({
   },
   infuraAPIKey: import.meta.env.VITE_INFURA_API_KEY || "",
 });
+// IMP END - MetaMask SDK Initialization
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
@@ -28,7 +31,9 @@ function App() {
   }, []);
 
   const connect = async () => {
+    // IMP START - Connect with MetaMask Wallet
     const accounts = await MMSDK.connect();
+    // IMP END - Connect to MetaMask Wallet
     setAccount(accounts[0]);
     if (accounts.length > 0) {
       setIsConnected(true);
@@ -65,7 +70,9 @@ function App() {
   // };
 
   const terminate = async () => {
+    // IMP START - Disconnect from MetaMask Wallet
     await MMSDK.terminate();
+    // IMP END - Disconnect from MetaMask Wallet
     setIsConnected(false);
     setBalance(undefined);
     setAccount(undefined);
