@@ -8,7 +8,7 @@ Clone and install dependencies for all examples:
 
 ```sh
 git clone https://github.com/MetaMask/metamask-sdk-examples.git
-cd metamask-sdk-examples && pnpm install
+cd metamask-sdk-examples
 ```
 
 ## 📦 Repository Structure
