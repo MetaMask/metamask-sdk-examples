@@ -18,7 +18,7 @@ const MMSDK = new MetaMaskSDK({
   },
   infuraAPIKey: import.meta.env.VITE_INFURA_API_KEY || "",
 });
-// IMP END - MetaMask SDK Initialization
+// IMP END - Initialize the MetaMask SDK
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
@@ -33,7 +33,7 @@ function App() {
   const connect = async () => {
     // IMP START - Connect with MetaMask Wallet
     const accounts = await MMSDK.connect();
-    // IMP END - Connect to MetaMask Wallet
+    // IMP END - Connect with MetaMask Wallet
     setAccount(accounts[0]);
     if (accounts.length > 0) {
       setIsConnected(true);
