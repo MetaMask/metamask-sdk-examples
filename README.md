@@ -88,14 +88,6 @@ pnpm install && pnpm dev
   npx degit MetaMask/metamask-sdk-examples/partners/web3auth mm-sdk-web3auth-quickstart && cd mm-sdk-web3auth-quickstart && npm install && npm run dev
   ```
 
-## 🔧 Technical Stack
-
-- **Build System**: Turborepo
-- **Package Manager**: pnpm
-- **Language**: TypeScript
-- **Linting**: ESLint
-- **Formatting**: Prettier
-
 ## 📚 Documentation
 
 Each example includes its own README with:
