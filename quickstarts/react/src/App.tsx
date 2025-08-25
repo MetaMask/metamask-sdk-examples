@@ -27,7 +27,9 @@ function App() {
   const [balance, setBalance] = useState<number | undefined>();
 
   useEffect(() => {
+    // IMP START - Connect with MetaMask Wallet
     setProvider(MMSDK.getProvider());
+    // IMP END - Connect with MetaMask Wallet
   }, []);
 
   const connect = async () => {
@@ -38,6 +40,15 @@ function App() {
     if (accounts.length > 0) {
       setIsConnected(true);
     }
+  };
+
+  const terminate = async () => {
+    // IMP START - Disconnect from MetaMask Wallet
+    await MMSDK.terminate();
+    // IMP END - Disconnect from MetaMask Wallet
+    setIsConnected(false);
+    setBalance(undefined);
+    setAccount(undefined);
   };
 
   const getBalance = async () => {
@@ -68,15 +79,6 @@ function App() {
   //   });
   //   console.log(batchResults);
   // };
-
-  const terminate = async () => {
-    // IMP START - Disconnect from MetaMask Wallet
-    await MMSDK.terminate();
-    // IMP END - Disconnect from MetaMask Wallet
-    setIsConnected(false);
-    setBalance(undefined);
-    setAccount(undefined);
-  };
 
   return (
     <>
