@@ -10,9 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "//IMP START": "IMP START - Install the MetaMask SDK",
     "@metamask/sdk": "^0.33.0",
-    "//IMP END": "IMP END - Install the MetaMask SDK,",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
