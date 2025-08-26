@@ -45,6 +45,16 @@
   text-decoration: underline;
 }
 
+.source-code-link a {
+  color: #888;
+  text-decoration: none;
+}
+
+.source-code-link a:hover {
+  text-decoration: underline;
+  color: #666ce5;
+}
+
 button {
   margin: 10px;
 }

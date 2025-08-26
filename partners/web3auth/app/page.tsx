@@ -156,7 +156,15 @@ export default function Home() {
             <div className="bg-pink-400/80 h-[104%] w-[103%] md:h-[103%] md:w-[102%] rounded-xl -z-20 absolute top-0 left-0"></div>
             <CardHeader className="w-full">
               <CardTitle className="text-2xl">
-                <h2>MetaMask {`<>`} Web3Auth </h2>
+                <h2>
+                  <a
+                    href="https://docs.metamask.io/sdk/connect/javascript-web3auth/"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    MetaMask {`<>`} Web3Auth{" "}
+                  </a>
+                </h2>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -178,6 +186,15 @@ export default function Home() {
             </CardContent>
           </Card>
         </section>
+        <footer className="flex flex-col items-center justify-center w-full">
+          <a
+            href="https://github.com/MetaMask/metamask-sdk-examples/tree/main/partners/web3auth"
+            target="_blank"
+            className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors text-center"
+          >
+            Source code
+          </a>
+        </footer>
       </div>
     </main>
   );

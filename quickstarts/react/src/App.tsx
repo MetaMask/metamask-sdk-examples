@@ -117,6 +117,14 @@ function App() {
           SDK Documentation
         </a>
       </p>
+      <footer className="source-code-link">
+        <a
+          href="https://github.com/MetaMask/metamask-sdk-examples/tree/main/quickstarts/react"
+          target="_blank"
+        >
+          Source code
+        </a>
+      </footer>
     </>
   );
 }
