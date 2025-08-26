@@ -69,9 +69,14 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">Guides</h3>
                 <div className="space-y-2">
                   {[
-                    {url: "https://docs.metamask.io/sdk/guides/manage-networks/", text: "Manage networks"},
-                    {url: "https://docs.metamask.io/sdk/guides/handle-transactions/", text: "Handle transactions"},
-                    {url: "https://docs.metamask.io/sdk/guides/interact-with-contracts/", text: "Interact with smart contracts"},
+                    {
+                      url: "https://docs.metamask.io/sdk/guides/handle-transactions/",
+                      text: "Handle transactions",
+                    },
+                    {
+                      url: "https://docs.metamask.io/sdk/guides/interact-with-contracts/",
+                      text: "Interact with smart contracts",
+                    },
                   ].map((item) => (
                     <a
                       href={item.url}
@@ -79,7 +84,9 @@ export default function Home() {
                       target="_blank"
                       className="flex items-center gap-2 w-fit text-white text-opacity-80 cursor-pointer transition-colors"
                     >
-                      <span className="hover:mr-1 duration-300">{item.text}</span>
+                      <span className="hover:mr-1 duration-300">
+                        {item.text}
+                      </span>
                       <ArrowRight className="h-5 w-5" />
                     </a>
                   ))}
@@ -89,7 +96,22 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">Examples</h3>
                 <div className="space-y-1">
                   {[
-                    {url: "https://github.com/MetaMask/metamask-sdk-examples/tree/main/examples/quickstart", text: "Next.js + Wagmi"},
+                    {
+                      url: "https://github.com/MetaMask/metamask-sdk-examples/tree/main/quickstarts/react",
+                      text: "React",
+                    },
+                    {
+                      url: "https://github.com/MetaMask/metamask-sdk-examples/tree/main/quickstarts/wagmi",
+                      text: "Wagmi",
+                    },
+                    {
+                      url: "https://github.com/MetaMask/metamask-sdk-examples/tree/main/quickstarts/rainbowkit",
+                      text: "RainbowKit",
+                    },
+                    {
+                      url: "https://github.com/MetaMask/metamask-sdk-examples/tree/main/quickstarts/javascript",
+                      text: "Vanilla JavaScript",
+                    },
                   ].map((item) => (
                     <a
                       href={item.url}
@@ -97,7 +119,9 @@ export default function Home() {
                       target="_blank"
                       className="flex items-center gap-2 w-fit text-white text-opacity-80 cursor-pointer transition-colors"
                     >
-                      <span className="hover:mr-1 duration-300">{item.text}</span>
+                      <span className="hover:mr-1 duration-300">
+                        {item.text}
+                      </span>
                       <ArrowRight className="h-5 w-5" />
                     </a>
                   ))}
@@ -106,6 +130,15 @@ export default function Home() {
             </CardContent>
           </Card>
         </section>
+        <footer className="flex flex-col items-center justify-center w-full">
+          <a
+            href="https://github.com/MetaMask/metamask-sdk-examples/tree/main/quickstarts/wagmi"
+            target="_blank"
+            className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors text-center"
+          >
+            Source code
+          </a>
+        </footer>
       </div>
     </main>
   );
