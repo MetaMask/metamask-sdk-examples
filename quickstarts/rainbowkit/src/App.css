@@ -25,6 +25,16 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.source-code-link a {
+  color: #888;
+  text-decoration: none;
+}
+
+.source-code-link a:hover {
+  text-decoration: underline;
+  color: #666ce5;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
