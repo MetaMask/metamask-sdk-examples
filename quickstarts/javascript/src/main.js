@@ -31,7 +31,7 @@ document.querySelector('#app').innerHTML = `
     <p class="read-the-docs">
       SDK Documentation: <a class="underline" href="https://docs.metamask.io/sdk/connect/javascript" target="_blank">https://docs.metamask.io/sdk/quickstarts/javascript</a>
     </p>
-    <footer className="flex flex-col items-center justify-center w-full">
+    <footer>
       <a
         href="https://github.com/MetaMask/metamask-sdk-examples/tree/main/quickstarts/javascript"
         target="_blank"
