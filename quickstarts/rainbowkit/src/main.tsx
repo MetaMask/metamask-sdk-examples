@@ -5,6 +5,7 @@ import App from "./App.tsx";
 
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { metaMaskWallet } from "@rainbow-me/rainbowkit/wallets";
 import { WagmiProvider } from "wagmi";
 import { mainnet, linea, sepolia, lineaSepolia } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
@@ -15,6 +16,12 @@ const config = getDefaultConfig({
   appName: "MetaMask SDK RainbowKit Quickstart",
   projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID,
   chains: [mainnet, linea, sepolia, lineaSepolia],
+  wallets: [
+    {
+      groupName: "Preferred",
+      wallets: [metaMaskWallet],
+    },
+  ],
   ssr: false, // true if your dApp uses SSR
 });
 
