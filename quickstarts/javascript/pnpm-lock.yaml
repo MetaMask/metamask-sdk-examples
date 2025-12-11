@@ -11,6 +11,9 @@ importers:
       '@metamask/sdk':
         specifier: ^0.33.0
         version: 0.33.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@vercel/analytics':
+        specifier: ^1.6.1
+        version: 1.6.1
     devDependencies:
       vite:
         specifier: ^7.1.2
@@ -403,6 +406,32 @@ packages:
 
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
+
+  '@vercel/analytics@1.6.1':
+    resolution: {integrity: sha512-oH9He/bEM+6oKlv3chWuOOcp8Y6fo6/PSro8hEkgCW3pu9/OiCXiUpRUogDh3Fs3LH2sosDrx8CxeOLBEE+afg==}
+    peerDependencies:
+      '@remix-run/react': ^2
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
 
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
@@ -1153,6 +1182,8 @@ snapshots:
   '@types/estree@1.0.8': {}
 
   '@types/ms@2.1.0': {}
+
+  '@vercel/analytics@1.6.1': {}
 
   available-typed-arrays@1.0.7:
     dependencies:

@@ -2,11 +2,14 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
+import { inject } from "@vercel/analytics";
 
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 import { createConfig, http, WagmiProvider } from "wagmi";
 import { mainnet, linea, sepolia, lineaSepolia } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+
+inject();
 
 const queryClient = new QueryClient();
 

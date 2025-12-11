@@ -6,6 +6,7 @@ import "./globals.css";
 import { getConfig } from "@/wagmi.config";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
+import { Analytics } from "./analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default async function RootLayout({
             <Navbar />
             {children}
           </Providers>
+          <Analytics />
         </main>
       </body>
     </html>
