@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/Navbar";
+import { Analytics } from "./analytics";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,6 +36,7 @@ export default async function RootLayout({
             <Navbar />
             {children}
           </Providers>
+          <Analytics />
         </main>
       </body>
     </html>
