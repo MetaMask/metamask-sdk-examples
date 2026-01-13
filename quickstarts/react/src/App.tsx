@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 // IMP START - MetaMask SDK Import
-import { MetaMaskSDK, type SDKProvider } from "@metamask/sdk";
+import { createMetamaskConnectEVM } from "@metamask/connect-evm";
 // IMP END - MetaMask SDK Import
 
 import reactLogo from "./assets/react.svg";
@@ -10,19 +10,27 @@ import metaMaskLogo from "./assets/mm-fox.svg";
 import "./App.css";
 
 // IMP START - Initialize the MetaMask SDK
-const MMSDK = new MetaMaskSDK({
-  dappMetadata: {
-    name: "MetaMask SDK Demo",
-    url: window.location.href,
-    iconUrl: "https://docs.metamask.io/img/metamask-logo.svg",
+const MMSDK = await createMetamaskConnectEVM({
+  dapp: {
+    name: "My DApp",
+    url: "https://mydapp.com",
   },
-  infuraAPIKey: import.meta.env.VITE_INFURA_API_KEY || "",
+  api: {
+    supportedNetworks: {
+      "eip155:1": `https://mainnet.infura.io/v3/${
+        import.meta.env.VITE_INFURA_API_KEY
+      }`,
+      "eip155:11155111": `https://sepolia.infura.io/v3/${
+        import.meta.env.VITE_INFURA_API_KEY
+      }`,
+    },
+  },
 });
 // IMP END - Initialize the MetaMask SDK
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
-  const [provider, setProvider] = useState<SDKProvider | undefined>();
+  const [provider, setProvider] = useState<unknown | undefined>();
   const [account, setAccount] = useState<string | undefined>();
   const [balance, setBalance] = useState<number | undefined>();
 
@@ -34,7 +42,9 @@ function App() {
 
   const connect = async () => {
     // IMP START - Connect with MetaMask Wallet
-    const accounts = await MMSDK.connect();
+    const { accounts } = await MMSDK.connect({
+      chainIds: [11155111, 1, 137],
+    });
     // IMP END - Connect with MetaMask Wallet
     setAccount(accounts[0]);
     if (accounts.length > 0) {
@@ -44,7 +54,7 @@ function App() {
 
   const terminate = async () => {
     // IMP START - Disconnect from MetaMask Wallet
-    await MMSDK.terminate();
+    await MMSDK.disconnect();
     // IMP END - Disconnect from MetaMask Wallet
     setIsConnected(false);
     setBalance(undefined);
@@ -55,7 +65,8 @@ function App() {
     if (!account || !provider) {
       return;
     }
-    const result = await provider?.request({
+    // @ts-expect-error - provider is unknown
+    const result = await (provider as unknown).request({
       method: "eth_getBalance",
       params: [account, "latest"],
     });
