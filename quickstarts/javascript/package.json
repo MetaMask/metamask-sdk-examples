@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.1.2"
+    "vite": "^7.1.11"
   },
   "dependencies": {
-    "@metamask/sdk": "^0.33.0"
+    "@metamask/sdk": "^0.33.1"
   }
 }
